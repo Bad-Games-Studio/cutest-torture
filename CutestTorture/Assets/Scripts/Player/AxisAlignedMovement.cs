@@ -31,7 +31,7 @@ namespace Player
 
         private void FixedUpdate()
         {   
-            var velocity = GetDirection() * Time.deltaTime;
+            var velocity = GetDirection();
             velocity.y = _rigidBody.velocity.y;
             _rigidBody.velocity = velocity;
         }
