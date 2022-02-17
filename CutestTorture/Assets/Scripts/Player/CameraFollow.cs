@@ -9,7 +9,7 @@ namespace Player
         public float fixedY;
         public Vector3 offset;
 
-        private void Update()
+        private void LateUpdate()
         {
             var newPosition = followTarget.position + offset;
             newPosition.y = fixedY;
