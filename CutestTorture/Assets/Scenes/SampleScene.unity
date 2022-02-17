@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 8126359372632064981, guid: bfad7bde2df184648a4c32dfc5e39514, type: 3}
-  finishPrefab: {fileID: 528898563769472391, guid: c79569aa329232f4f82cd11c5006356c, type: 3}
+  finishPrefab: {fileID: 4413528984537088771, guid: c79569aa329232f4f82cd11c5006356c, type: 3}
   coinPrefab: {fileID: 167927678772824797, guid: 9b11cea4be9573146af3f61cdb53e886, type: 3}
   minSize: {x: 10, y: 1}
   maxSize: {x: 30, y: 5}
@@ -401,6 +401,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6227860389127854983, guid: 36e633c4f54c2ea4e995229b9ec9b2ac, type: 3}
   m_PrefabInstance: {fileID: 1316849258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028912421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028912419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb1e0636357bb49a9e53c626784863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2028912426
 MonoBehaviour:
   m_ObjectHideFlags: 0

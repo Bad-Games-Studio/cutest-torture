@@ -16,7 +16,7 @@ namespace Player
 
         private static void PrintAmountOfCoins(int amount)
         {
-            Debug.Log(amount);
+            Debug.Log($"Da playa now haz {amount} ඞ amogus coin(s) ඞ");
         }
     }
 }
