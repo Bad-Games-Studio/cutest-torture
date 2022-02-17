@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions;
 using Random = UnityEngine.Random;
@@ -36,8 +35,7 @@ namespace Level
             InstantiatePlatforms(scales);
         }
 
-
-        [NotNull]
+        
         private IEnumerable<Vector2> RandomPlatformSizes()
         {
             var sizes = new List<Vector2>(_nPlatforms);
@@ -60,7 +58,6 @@ namespace Level
         }
         
         
-        [NotNull]
         private List<Vector3> PlatformScales(IEnumerable<Vector2> sizes)
         {
             var scales = new List<Vector3>(_nPlatforms);
