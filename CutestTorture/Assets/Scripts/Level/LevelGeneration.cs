@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Random = UnityEngine.Random;
 
 namespace Level
 {
@@ -9,6 +10,7 @@ namespace Level
     {
         public GameObject platformPrefab;
         public GameObject finishPrefab;
+        public GameObject coinPrefab;
 
         public Vector2 minSize;
         public Vector2 maxSize;
@@ -30,7 +32,7 @@ namespace Level
         {
             _nPlatforms = Random.Range(platformsMinimalAmount, platformsMaximalAmount);
             var sizes = RandomPlatformSizes();
-            List<Vector3> scales = PlatformScales(sizes);
+            var scales = PlatformScales(sizes);
             InstantiatePlatforms(scales);
         }
 
@@ -91,6 +93,7 @@ namespace Level
             var previousScale = scales[0];
             var previousPosition = PlatformsStartPosition(scales[0]);
             InstantiatePlatform(previousPosition, previousScale);
+            InstantiateCoin(previousPosition);
             scales.RemoveAt(0);
             
             var axis = 0; // x=0, z=1. Z was handled already.
@@ -98,6 +101,7 @@ namespace Level
             {
                 var position = PlatformPosition(axis, scale, previousScale, previousPosition);
                 InstantiatePlatform(position, scale);
+                InstantiateCoin(position);
                 axis = InvertedAxis(axis);
                 previousPosition = position;
                 previousScale = scale;
@@ -145,6 +149,11 @@ namespace Level
         {
             var platform = Instantiate(platformPrefab, position, Quaternion.identity);
             platform.transform.localScale = scale;
+        }
+
+        private void InstantiateCoin(Vector3 platformCenter)
+        {
+            Instantiate(coinPrefab, platformCenter + Vector3.up, Quaternion.identity);
         }
 
         private static Vector3 FinishPosition(int axis, Vector3 scale, Vector3 previousScale, Vector3 previousPosition)
