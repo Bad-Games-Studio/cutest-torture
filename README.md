@@ -6,7 +6,7 @@ This project is a prototype of a Dancing Line game.
 
 Key features are:
   - Move along the platforms and collect coins.
-  - IF you fall off the platform, you lose.
+  - If you fall off the platform, you lose.
   - Reach the finish to win.
 
 Left Mouse button to alternate between moving left or right.
