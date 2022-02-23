@@ -4,13 +4,13 @@ namespace Player
 {
     public class CoinPickup : MonoBehaviour
     {
-        private int _nCoins;
+        private int _coinsAmount;
         public delegate void NotifyCoinsAmountUpdate(int amount);
         public static event NotifyCoinsAmountUpdate OnCoinPickupEvent;
     
         private void Start()
         {
-            _nCoins = 0;
+            _coinsAmount = 0;
         }
 
         private void OnTriggerEnter(Collider coin)
@@ -20,8 +20,8 @@ namespace Player
                 return;
             }
             Destroy(coin.gameObject);
-            _nCoins += 1;
-            OnCoinPickupEvent?.Invoke(_nCoins);
+            _coinsAmount += 1;
+            OnCoinPickupEvent?.Invoke(_coinsAmount);
         }
     }
 }
