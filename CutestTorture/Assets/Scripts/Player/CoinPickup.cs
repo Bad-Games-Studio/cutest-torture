@@ -1,3 +1,4 @@
+using Level;
 using UnityEngine;
 
 namespace Player
@@ -15,7 +16,7 @@ namespace Player
 
         private void OnTriggerEnter(Collider coin)
         {
-            if (coin.gameObject.name != "Coin(Clone)") // ehh...
+            if (!coin.TryGetComponent<CoinBehavior>(out _))
             {
                 return;
             }

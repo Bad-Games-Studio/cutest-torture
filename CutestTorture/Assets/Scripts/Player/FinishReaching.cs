@@ -1,3 +1,4 @@
+using Level;
 using UnityEngine;
 
 namespace Player
@@ -7,9 +8,9 @@ namespace Player
         public delegate void NotifyReachedFinish();
         public static event NotifyReachedFinish OnFinishReached;
 
-        private void OnTriggerEnter(Collider coin)
+        private void OnTriggerEnter(Collider finish)
         {
-            if (coin.gameObject.name != "FinishMark")
+            if (!finish.TryGetComponent<FinishMarkBehavior>(out _))
             {
                 return;
             }

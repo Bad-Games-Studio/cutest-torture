@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8189184556146438351}
   - component: {fileID: 444864294731758384}
+  - component: {fileID: 6094600128620399034}
   m_Layer: 0
   m_Name: FinishMark
   m_TagString: Untagged
@@ -140,3 +141,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 3, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6094600128620399034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938616585379062028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552986aed3836d347841dc96cbff3cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
